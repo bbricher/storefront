@@ -91,7 +91,32 @@ function updateItem(product, newQuantity, quantity, price) {
         if (err) throw err;
         // Log all results of the SELECT statement
         console.log("Total cost is: $" + totalCost);
-        connection.end();
   });
+}
+
+function buyMore() {
+    inquirer
+      .prompt(
+      {
+        name: "repeat",
+        type: "checkbox",
+        message: "Would you like to buy more?",
+        choices: [
+            "Yes",
+            "No"
+        ]
+      }
+      )
+      .then(function(answer) {
+        switch (answer.repeat) {
+            case "Yes":
+              itemDisplay();
+              break;
+      
+            case "No":
+              connection.end();
+              break;
+        }
+      })
 }
 
