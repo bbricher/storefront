@@ -13,7 +13,7 @@
 
 ### Example of Out of Stock:
 
-![](out-of-stock-example.gif)
+![](out-of-sotck-example.gif)
 
 ### Example of Manager Menu:
 
